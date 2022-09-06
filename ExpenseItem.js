@@ -10,7 +10,9 @@ const ExpenseItem = (props) => {
   const clickHandler = () => {
     setAmount("$100");
   };
-
+  const clickHandlerDelete = (event) => {
+    document.getElementById(props.date).remove();
+  };
   return (
     <Card id={props.date} className="expense-item">
       <ExpenseDate date={props.date} />
@@ -20,6 +22,7 @@ const ExpenseItem = (props) => {
         location={props.location}
       />
       <button onClick={clickHandler}>update Amount</button>
+      <button onClick={clickHandlerDelete}>Delete</button>
     </Card>
   );
 };
