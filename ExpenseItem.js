@@ -11,7 +11,8 @@ const ExpenseItem = (props) => {
     setAmount("$100");
   };
   const clickHandlerDelete = (event) => {
-    document.getElementById(props.date).remove();
+    // document.getElementById(props.date).remove();
+    console.log(event);
   };
   return (
     <Card id={props.date} className="expense-item">
